@@ -3,6 +3,7 @@
 An Invoice ID is .....
 
 The InvoiceID column adheres to the following requirements:
+Is an optional column, allows NULL and MUST be used if a cloud service provider has invoiceID prepopulated in their billing data.
 
 * The InvoiceID column SHOULD be present in a [*FOCUS dataset*](#glossary:FOCUS-dataset).
 * This column MUST be of type String and MAY contain null values.
