@@ -1,29 +1,27 @@
-# Pricing Denomination
+# Pricing Currency
 
-[*Pricing Denomination*](#glossary:pricing-denomination) is a value that represents the unit of measure in which a charge for [*resources*](#glossary:resource) or [*services*](#glossary:service) was priced. Pricing Denomination is commonly used in scenarios where costs need to be grouped or aggregated by proprietary units of measure.
+[*Pricing Currency*](#glossary:pricing-currency) is a value that represents the unit of measure in which a charge for [*resources*](#glossary:resource) or [*services*](#glossary:service) was priced. Pricing Currency is commonly used in scenarios where costs need to be grouped or aggregated by some combination of the following currency types:
 
-The unit of measure may be one of the following types: 
+ * Fiat currency (e.g. USD, EUR).
+ * Virtual currency (e.g. tokens, credits).
 
- * Currency (e.g. USD, EUR).
- * Non-currency consumable unit (e.g. tokens, credits).
+The PricingCurrency column adheres to the following requirements:
 
-The PricingDenomination column adheres to the following requirements:
-
-* PricingDenomination presence in a [*FOCUS dataset*](#glossary:FOCUS-dataset) is defined as follows:
-  * PricingDenomination MUST be present in a FOCUS dataset when the provider presents prices in a non-currency consumable unit of measure (e.g. credits, tokens).
-  * PricingDenomination MUST be present in a FOCUS dataset when the provider presents prices and bills in different currencies (e.g. prices are presented in USD and billed in EUR).
-  * PricingDenomination MAY be present in a FOCUS dataset in all other cases.
-* PricingDenomination MUST be of type String.
-* PricingDenomination MUST conform to [Pricing Denomination Format](#pricingdenominationformat) requirements.
-* PricingDenomination MUST NOT be null.
+* PricingCurrency presence in a [*FOCUS dataset*](#glossary:FOCUS-dataset) is defined as follows:
+  * PricingCurrency MUST be present in a FOCUS dataset when the provider presents prices in a virtual currency (e.g. credits, tokens).
+  * PricingCurrency MUST be present in a FOCUS dataset when the provider presents prices and bills in different fiat currencies (e.g. prices are presented in USD and billed in EUR).
+  * PricingCurrency MAY be present in a FOCUS dataset in all other cases.
+* PricingCurrency MUST be of type String.
+* PricingCurrency MUST conform to [Currency Format](#currencyformat) requirements.
+* PricingCurrency MUST NOT be null.
 
 ## Column ID
 
-PricingDenomination
+PricingCurrency
 
 ## Display Name
 
-Pricing Denomination
+Pricing Currency
 
 ## Description
 
@@ -37,7 +35,7 @@ Represents the unit of measure in which a charge was priced.
 | Feature level   | Conditional                         |
 | Allows nulls    | True                                |
 | Data type       | String                              |
-| Value format    | [Pricing Denomination Format](#pricingdenominationformat) |
+| Value format    | [Currency Format](#currencyformat) |
 
 ## Introduced (version)
 
